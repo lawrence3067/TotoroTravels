@@ -29,11 +29,12 @@
 .search-bar{
     flex: 1;
     height: 36px;
-    width: 200px;
-    border-radius: 20px;
+    width: 350px;
+    border-radius: 15px;
     padding-left: 10px;
     margin-top: 25px;
     margin-right: 30px;
+    border: 2px solid #004e64;
 
 }
 
