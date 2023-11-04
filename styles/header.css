@@ -14,6 +14,11 @@
     z-index: 100;
 }
 
+.search-icon{
+    height:10px ;
+    width: 10px;
+}
+
 .left-section{
     font-family: 'Times New Roman', Times, serif;
     justify-content: left;
@@ -46,4 +51,31 @@
 
 .city-title{
     align-items: center;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search-wrapper img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.search-icon{
+    width: 15px;
+    height: 15px;
+    padding-left: 730px;
+    padding-top: 37px;
+    cursor: pointer;
+}
+
+
+.search-icon2{
+    width: 15px;
+    height: 15px;
+    padding-left: 330px;
+    padding-top: 37px;
+    cursor: pointer;
 }
