@@ -1,5 +1,17 @@
 .left-section{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: bold;
+    color: blue;
+}
+
+
+
+#search-bar{
+
+}
+
+#profile-button{
+    height: 14px;
+    width: 14px
 }
