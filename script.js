@@ -1,7 +1,7 @@
 async function getCityInfo()
 {
-    let desiredCity = document.getElementById("search").value;
-    let desiredCom = document.getElementById("thing").value;
+    let desiredCity = document.getElementById("loc").value;
+    let desiredCom = document.getElementById("kw").value;
 
     if (desiredCom != '')
     {
