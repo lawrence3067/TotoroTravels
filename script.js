@@ -2,6 +2,12 @@ async function getCityInfo()
 {
     let desiredCity = document.getElementById("loc").value;
     let desiredCom = document.getElementById("kw").value;
+    desiredCom.addEventListener('keyup', function(event) {
+        if (event.keyCode == 13)
+        {
+            desiredCity.click();
+        }
+    });
 
     if (desiredCom != '')
     {
