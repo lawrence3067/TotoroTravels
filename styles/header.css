@@ -54,6 +54,7 @@
 
 .destination-preview-row{
     margin-bottom: 8px;
+    margin-top: 20px;
 }
 
 .popular-destinations-grid{
@@ -66,4 +67,10 @@
 .destination-picture{
     height: 300px;
     width: 450px;
+}
+
+.logo{
+    height: 100px;
+    width: 250px;
+    margin-left: -20px;
 }
