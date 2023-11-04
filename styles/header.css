@@ -42,8 +42,20 @@
 
 }
 
-.popular-destinations{
-    flex-direction: row;
-    height: 50px;
-    width: 50px;
+.popular-destinations-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+
+}
+
+.destination-preview-row{
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
 }
