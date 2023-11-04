@@ -44,8 +44,11 @@
 
 .popular-destinations-grid{
     display: grid;
-    grid-template-columns: 50px 1fr;
+    justify-content: center;
     padding-top: 110px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
 
 }
 
@@ -53,7 +56,7 @@
     margin-bottom: 8px;
 }
 
-.video-grid{
+.popular-destinations-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 16px;
@@ -61,6 +64,6 @@
 }
 
 .destination-picture{
-    height: 90px;
-    width: 90px;
+    height: 300px;
+    width: 450px;
 }
