@@ -42,8 +42,8 @@
 
 }
 
-.popular-destinations{
-    flex-direction: row;
-    height: 50px;
-    width: 50px;
+.popular-destinations-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    
 }
