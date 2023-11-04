@@ -74,6 +74,7 @@
 .destination-picture{
     height: 300px;
     width: 450px;
+    border-radius: 15px;
 }
 
 .logo{
