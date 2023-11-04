@@ -42,6 +42,13 @@
 
 }
 
+.popular-destination-title{
+    font-size: 20px;
+    color: #4E6E58;
+    margin-top: -20px;
+
+}
+
 .popular-destinations-grid{
     display: grid;
     justify-content: center;
@@ -54,7 +61,7 @@
 
 .destination-preview-row{
     margin-bottom: 8px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .popular-destinations-grid{
@@ -73,4 +80,8 @@
     height: 100px;
     width: 250px;
     margin-left: -20px;
+}
+
+.city-title{
+    align-items: center;
 }
