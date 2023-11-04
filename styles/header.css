@@ -3,15 +3,22 @@
     font-size: 20px;
     font-weight: bold;
     color: blue;
+    justify-content: left;
 }
 
 
 
 #search-bar{
+    flex: 1;
+    justify-content: center;
+    height: 36px;
+    width: 500px;
+    border-radius: 20px;
 
 }
 
-#profile-button{
+.right-section{
     height: 14px;
-    width: 14px
+    width: 14px;
+    justify-content: right;
 }
