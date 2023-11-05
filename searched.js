@@ -1,7 +1,5 @@
 async function getCityInfo()
 {
-    // let desiredCity = document.getElementById("loc").value;
-    // let desiredCom = document.getElementById("kw").value;
     var url_string = window.location.href;
     var url = new URL(url_string);
     var desiredCity = url.searchParams.get("city");
@@ -12,26 +10,17 @@ async function getCityInfo()
     {
         specificSearch = await getCommodity(desiredCity, desiredCom);
         specificSearch["businesses"].sort((a,b) => b.rating - a.rating);
-        // Object.entries(specificSearch["businesses"]).forEach(([key, value]) => 
-        // {
-        //     console.log(key);
-        //     console.log(value);
-        //     if (key == "name" || key == "image_url" || key == "url" || key == "rating" || key == "price" || key == "location")
-        //     {
-        //         document.getElementById("info").innerHTML += `${value}<br>`;
-        //     }
-        //     //console.log(results[counter]);
-        // });
 
-       //specificSearch["businesses"].map(business)
         specificSearch["businesses"].map((business) => {
-            document.getElementById("thing").innerHTML += '<div style="display: inline-block; width: 50%; text-wrap: wrap">' + `<p>${business["name"]}</p> <p>${business["price"]}</p> <p>${business["image_url"]}</p> <p style="word-break: break-all">${business["url"]}</p> <p>${business["rating"]}</p>` + `</div>`;
-
-            // document.getElementById("thing").innerHTML += `<p>${business["name"]}</p> <p>${business["price"]}</p> <p>${business["image_url"]}</p> <p>${business["url"]}</p> <p>${business["rating"]}</p>`;
-            // document.getElementById("thing").innerHTML += `</div>`;
+            document.getElementById("thing").innerHTML += '<div class="card m-3" style="width: 18rem;">' + 
+            `<img src=${business["image_url"]} class="card-img-top"/>` + 
+            `<div class="card-body">` +
+            `<a href=${business["url"]}> <p class="store_name">${business["name"]}</p> </a>` + 
+            `<p class="store_rating">Rating: ${business["rating"]} stars</p>` + 
+            `</div>` +
+           `</div>`;
 
         });
-        //console.log(results[counter]);
     }
     else
     {
@@ -63,7 +52,7 @@ async function getCommodity(city, com) {
     cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
         .then(response => response.json())
         .catch(err => console.error(err));
-        //console.log(JSON.parse(cityCommodity));
+        console.log(JSON.parse(cityCommodity));
 
     return JSON.parse(cityCommodity);
 }
