@@ -10,12 +10,14 @@
 
 function getCityInfo()
 {
+    //console.log("called");
     let desiredCity = document.getElementById("loc").value;
     let desiredCom = document.getElementById("kw").value;
     counter = 0;
 
     if (desiredCom != '')
     {
+        console.log("bitch");
         specificSearch = getCommodity(desiredCity, desiredCom);
         Object.entries(specificSearch).forEach(([key, value]) => 
         {
@@ -36,6 +38,7 @@ function getCityInfo()
     }
     else
     {
+        console.log("shit");
         var hotels;
         var restaurants;
 
