@@ -24,7 +24,7 @@ async def get_yelp_data(loc: str, term: str):
     
     headers = {
         "accept": "application/json",
-        "Authorization": "Bearer eh4N9M5tz4-1ss0daqIgspdjsHaUVaIc0gQc2zD1axSjU4i8aExBIs6umEODX5E5dCjo3y3yNFeM_9yKtblbN7fW94GxtOeoysF8uzStsEKHUKc38lnnKfQaAh1IZXYx"
+        "Authorization": "Bearer Za6PuIqA8M7B-gtVWBxBbqlepA1GIanYbukZJ5bSdGbm9EMS0Ew8rEV6x9Qj3IRPJ9IlShPVyBSFg-McpkilG3DliD4t0mEIpESuX6OBuIR4b4EEZ4jmOuyVCZxGZXYx"
     }
     
     response = requests.get(url, headers=headers)
