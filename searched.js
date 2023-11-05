@@ -11,7 +11,7 @@ async function getCityInfo()
     if (desiredCom != '')
     {
         specificSearch = await getCommodity(desiredCity, desiredCom);
-        document.getElementById("thing").innerHTML += '<p><br>';
+        specificSearch["businesses"].sort((a,b) => b.rating - a.rating);
         // Object.entries(specificSearch["businesses"]).forEach(([key, value]) => 
         // {
         //     console.log(key);
@@ -25,9 +25,12 @@ async function getCityInfo()
 
        //specificSearch["businesses"].map(business)
         specificSearch["businesses"].map((business) => {
-            document.getElementById("thing").innerHTML += `<p>${business["name"]} ${business["price"]} ${business["image_url"]} ${business["url"]} ${business["rating"]}</p>`
+            document.getElementById("thing").innerHTML += '<div style="display: inline-block; width: 50%; text-wrap: wrap">' + `<p>${business["name"]}</p> <p>${business["price"]}</p> <p>${business["image_url"]}</p> <p style="word-break: break-all">${business["url"]}</p> <p>${business["rating"]}</p>` + `</div>`;
+
+            // document.getElementById("thing").innerHTML += `<p>${business["name"]}</p> <p>${business["price"]}</p> <p>${business["image_url"]}</p> <p>${business["url"]}</p> <p>${business["rating"]}</p>`;
+            // document.getElementById("thing").innerHTML += `</div>`;
+
         });
-        document.getElementById("info").innerHTML += `</p>`;
         //console.log(results[counter]);
     }
     else
@@ -35,10 +38,23 @@ async function getCityInfo()
         var hotels;
         var restaurants;
 
-        hotels = getHotels(desiredCity);
-        restaurants = getRestaurants(desiredCity);
+        hotels = await getCommodity(desiredCity, 'hotels');
+        hotels["businesses"].sort((a,b) => b.rating - a.rating);
+        hotels["businesses"].map((business) => {
+            document.getElementById("thing").innerHTML += `<p>${business["name"]} ${business["price"]} ${business["image_url"]} ${business["url"]} ${business["rating"]}</p>`
+        });
 
-        console.log(hotels);
+        restaurants = await getCommodity(desiredCity, 'restaurants');
+        restaurants["businesses"].sort((a,b) => b.rating - a.rating);
+        restaurants["businesses"].map((business) => {
+            document.getElementById("thing").innerHTML += `<p>${business["name"]} ${business["price"]} ${business["image_url"]} ${business["url"]} ${business["rating"]}</p>`
+        });
+
+        attractions = await getCommodity(desiredCity, 'tourist_attractions');
+        attractions["businesses"].sort((a,b) => b.rating - a.rating);
+        attractions["businesses"].map((business) => {
+            document.getElementById("thing").innerHTML += `<p>${business["name"]} ${business["price"]} ${business["image_url"]} ${business["url"]} ${business["rating"]}</p>`
+        });
     }
 
 }
@@ -47,7 +63,7 @@ async function getCommodity(city, com) {
     cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
         .then(response => response.json())
         .catch(err => console.error(err));
-        console.log(JSON.parse(cityCommodity));
+        //console.log(JSON.parse(cityCommodity));
 
     return JSON.parse(cityCommodity);
 }
