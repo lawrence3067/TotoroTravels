@@ -17,14 +17,16 @@ async function getCityInfo()
         specificSearch = getCommodity(desiredCity, desiredCom);
         Object.entries(specificSearch).forEach(([key, value]) => 
         {
+            document.getElementById("") += `<p><br>`;
             Object.entries(value).forEach(([key, value]) =>
             {
                 if (key == "name" || key == "image_url" || key == "url" || key == "rating" || key == "price" || key == "location")
                 {
-                    results[counter].push(value);
+                    document += `${value}<br>`;
                 }
             });
-            console.log(results[counter]);
+            document += `</p>`;
+            //console.log(results[counter]);
             counter += 1;
         });
         console.log(results[counter]);
