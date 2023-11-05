@@ -24,8 +24,8 @@ async function getCityInfo()
         //     }
         //     //console.log(results[counter]);
         // });
-        console.log(specificSearch);
-        console.log(specificSearch["businesses"]);
+
+       //specificSearch["businesses"].map(business)
         specificSearch["businesses"].map((business) => {
             document.getElementById("thing").innerHTML += `<p>${business["name"]} </p>`
         });
