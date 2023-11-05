@@ -8,6 +8,12 @@
 
 }
 
+.pd{
+    height: 30%;
+    width: 30%;
+    margin-left: 20px;
+}
+
 .popular-destinations-grid{
     display: grid;
     justify-content: center;
@@ -44,7 +50,7 @@
     padding-top: 10px;
     display: flex;
     align-items: center;
-    
+
     
 }
 
