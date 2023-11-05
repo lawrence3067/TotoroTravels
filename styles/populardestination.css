@@ -29,8 +29,9 @@
 
 .destination-picture{
     height: 300px;
-    width: 450px;
+    width: 33vw;
     border-radius: 15px;
+    width: 90%;
 }
 
 .city-title{
