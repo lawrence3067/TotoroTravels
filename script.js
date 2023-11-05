@@ -17,15 +17,15 @@ async function getCityInfo()
         specificSearch = getCommodity(desiredCity, desiredCom);
         Object.entries(specificSearch).forEach(([key, value]) => 
         {
-            document.getElementById("") += `<p><br>`;
+            document.getElementById("info").innerHTML += `<p><br>`;
             Object.entries(value).forEach(([key, value]) =>
             {
                 if (key == "name" || key == "image_url" || key == "url" || key == "rating" || key == "price" || key == "location")
                 {
-                    document += `${value}<br>`;
+                    document.getElementById("info").innerHTML += `${value}<br>`;
                 }
             });
-            document += `</p>`;
+            document.getElementById("info").innerHTML += `</p>`;
             //console.log(results[counter]);
             counter += 1;
         });
