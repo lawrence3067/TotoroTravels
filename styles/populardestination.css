@@ -3,6 +3,8 @@
     color: #4E6E58;
     margin-top: 15px;
     padding-left: 50px;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -40,7 +42,10 @@
     color: black;
     font-weight: bold;
     padding-top: 10px;
-    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    
+    
 }
 
 .test{
