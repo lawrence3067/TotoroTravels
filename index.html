@@ -14,7 +14,11 @@
             <link rel="stylesheet" href="styles/populardestination.css">
             <link rel="stylesheet" href="styles/header.css">
             <link rel="stylesheet" href="styles/popularattractions.css">
-        <script src="./script.js"></script>
+        <!--Link slick for image carousels-->
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+       <!--Link JS file-->
+       <script src="./script.js"></script>
     </head>
 
 
@@ -91,6 +95,19 @@
                     </a>
             </div>
         </div>
+        <!--Lucerne thumbnail-->
+        <div class="destination-preview-row">
+            <!--Lucerne image-->
+            <div class="destination-thumbnail">
+                <a href="http://127.0.0.1:5500/popular-destinations/lucerne.html">
+                    <img class="destination-picture" src="pictures/lucerne-image.jpeg"/>
+                </a>
+            </div>
+            <!--Lucerne text-->
+            <div class="destination-info">
+                    <a href="http://127.0.0.1:5500/popular-destinations/lucerne.html">
+                        <p class="city-title">Lucerne, Switzerland</p>
+        </div>
     </section>
   <!--Popular attractions hyperlinks-->
   <!--Popular attractions titles-->
@@ -121,7 +138,6 @@
                 <img class="destination-picture" src="pictures/tokyo-disneyland.jpeg"/>
             </a>
         </div>
-
         <div class="attraction-info">
             <p class="attraction-name">
                 <a href="http://127.0.0.1:5500/popular-attractions/tokyo-disneyland.html">
@@ -147,13 +163,11 @@
     </div>
     <!--Great Wall of China thumbnail-->
     <div classname="attraction-preview-row">
-        <!--Great Wall of China image-->
         <div classname="attraction-picture">
             <a href="http://127.0.0.1:5500/popular-attractions/great-wall-of-china.html">
                 <img class="attraction-picture" src="pictures/great-wall-of-china.png"/>
             </a>
         </div>
-        <!--Great Wall of China text-->
         <div classname="attraction-info">
             <p classname="attraction-name">
                 <a href="http://127.0.0.1:5500/popular-attractions/great-wall-of-china.html">
@@ -162,22 +176,34 @@
             </p>
         </div>
     </div>
-    <!--Great Wall of China thumbnail-->
-    <div classname="attraction-preview-row">
-        <div classname="attraction-picture">
-            <a href="http://127.0.0.1:5500/popular-attractions/great-wall-of-china.html">
-                <img class="attraction-picture" src="pictures/great-wall-of-china.png"/>
-            </a>
-        </div>
-        <div classname="attraction-info">
-            <p classname="attraction-name">
-                <a href="http://127.0.0.1:5500/popular-attractions/great-wall-of-china.html">
-                    The Great Wall of China
-                </a>
-            </p>
-        </div>
-    </div>
   </section>
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  
+  <!--Add image carousel for popular destinations-->
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('.popular-destinations-grid').slick({
+        slidesToShow: 3,
+        dots:true,
+        centerMode: true,
+        });
+    });
+  </script>
+  <!--Add image carousel for popular attractions-->
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('.popular-attractions-grid').slick({
+        slidesToShow: 3,
+        dots:true,
+        centerMode: true,
+        });
+    });
+  </script>
+
 </main>
 </body>
 
