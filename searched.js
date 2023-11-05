@@ -5,9 +5,7 @@ async function getCityInfo()
     var url_string = window.location.href;
     var url = new URL(url_string);
     var desiredCity = url.searchParams.get("city");
-    console.log(desiredCity);
     var desiredCom = url.searchParams.get("specific");
-    console.log(desiredCom);
     counter = 0;
 
     if (desiredCom != '')
@@ -39,6 +37,8 @@ async function getCityInfo()
 
         hotels = getHotels(desiredCity);
         restaurants = getRestaurants(desiredCity);
+
+        console.log(hotels);
     }
 
 }
