@@ -39,10 +39,9 @@
     color: black;
     font-weight: bold;
     padding-top: 10px;
-    display: flex;
-    align-items: center;
+    text-align: center;
     text-decoration: none;
-
+    width: 90%;
     
 }
 

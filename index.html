@@ -52,12 +52,14 @@
     <br><br><br><br><br><br>
     <!--Popular destinations hyperlinks-->
     <!--Popular destinations title-->
-    <h1 class="popular-destination-title"><img src="pictures/destinations-title.jpg" /></h1>
+    <div class="popular-destination-logo">
+        <img class="pd" src="pictures/destinations-title.jpg"/>
+    </div>
     <!--Popular destinations thumbnails-->
     <section class="popular-destinations-grid">
         <!--Tokyo thumbnail-->
-        <div class="destination-preview-row">
-            <div class="destination-thumbnail">
+        <div classname="destination-preview-row">
+            <div classname="destination-thumbnail">
                 <a href="http://127.0.0.1:5500/popular-destinations/tokyo.html">
                     <img class="destination-picture" src="pictures/tokyo-image.jpeg"/>
                 </a>
@@ -69,8 +71,8 @@
             </div>
         </div>
         <!--Honolulu thumbnail-->
-        <div class="destination-preview-row">
-            <div class="destination-thumbnail">
+        <div classname="destination-preview-row">
+            <div classname="destination-thumbnail">
                 <a href="http://127.0.0.1:5500/popular-destinations/honolulu.html">
                     <img class="destination-picture" src="pictures/honolulu-image.jpeg"/>
                 </a>
@@ -89,7 +91,7 @@
                 </a>
             </div>
 
-            <div class="destination-info">
+            <div classname="destination-info">
                     <a classname="city-title" href="http://127.0.0.1:5500/popular-destinations/paris.html">
                         Paris, France
                     </a>
@@ -113,52 +115,46 @@
   <!--Popular attractions titles-->
   <div class="popular-destination-logo">
     <img class="pd" src="pictures/attractions-title.jpg"/>
-</div>
+  </div>
   <!--Popular attractions thumbnails-->
   <section class="popular-attractions-grid">
     <!--Eiffel Tower thumbnail-->
-    <div class="attraction-preview-row">
-        <div class="attraction-picture">
+    <div classname="attraction-preview-row">
+        <div classname="attraction-picture">
             <a href="http://127.0.0.1:5500/popular-attractions/eiffel-tower.html">
                 <img class="destination-picture" src="pictures/eiffel-tower.avif"/>
             </a>
         </div>
-        <div class="attraction-info">
-            <p class="attraction-name">
+        <div classname="attraction-info">
                 <a href="http://127.0.0.1:5500/popular-attractions/eiffel-tower.html">
-                    The Eiffel Tower
+                    <p class="attraction-name">The Eiffel Tower</p>
                 </a>
-            </p>
         </div>
     </div>
     <!--Tokyo Disneyland thumbnail-->
-    <div class="attraction-preview-row">
-        <div class="attraction-picture">
+    <div classname="attraction-preview-row">
+        <div classname="attraction-picture">
             <a href="http://127.0.0.1:5500/popular-attractions/tokyo-disneyland.html">
                 <img class="destination-picture" src="pictures/tokyo-disneyland.jpeg"/>
             </a>
         </div>
         <div class="attraction-info">
-            <p class="attraction-name">
                 <a href="http://127.0.0.1:5500/popular-attractions/tokyo-disneyland.html">
                     <p class="attraction-name">Tokyo Disneyland</p>
                 </a>
-            </p>
         </div>
     </div>
     <!--Niagara Falls thumbnail-->
-    <div class="attraction-preview-row">
-        <div class="attraction-picture">
+    <div classname="attraction-preview-row">
+        <div classname="attraction-picture">
             <a href="http://127.0.0.1:5500/popular-attractions/niagara-falls.html">
                 <img class="attraction-picture" src="pictures/niagara-falls.jpeg"/>
             </a>
         </div>
         <div class="attraction-info">
-            <p class="attraction-name">
                 <a href="http://127.0.0.1:5500/popular-attractions/niagara-falls.html">
                     <p class="attraction-name">Niagara Falls</p>
                 </a>
-            </p>
         </div>
     </div>
     <!--Great Wall of China thumbnail-->
@@ -169,11 +165,9 @@
             </a>
         </div>
         <div classname="attraction-info">
-            <p classname="attraction-name">
                 <a href="http://127.0.0.1:5500/popular-attractions/great-wall-of-china.html">
                     <p class="attraction-name">The Great Wall of China</p>
                 </a>
-            </p>
         </div>
     </div>
   </section>
@@ -189,7 +183,7 @@
         $('.popular-destinations-grid').slick({
         slidesToShow: 3,
         dots:true,
-        centerMode: true,
+        centerMode: true
         });
     });
   </script>

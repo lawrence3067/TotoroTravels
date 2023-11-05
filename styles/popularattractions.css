@@ -21,7 +21,7 @@
     margin-top: -10px;
 }
 
-.popular-destinations-grid{
+.popular-attraction-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 16px;
@@ -42,4 +42,5 @@
 .attraction-name{
     color: black;
     font-weight: bold;
+    text-decoration: none;
 }
