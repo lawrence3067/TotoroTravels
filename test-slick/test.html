@@ -26,19 +26,15 @@
   <header class="header">
     <!--TotoroTravels Logo-->
     <div class="left-section">
-        <img class="logo" src="pictures/logo.png"/>
+        <img class="logo" src="../pictures/logo.png"/>
     </div>
     <!--Search bars-->
     <div class="middle-section">
         <div class="search-wrapper">
             <input class="search-bar" id="loc" type="text" placeholder="Enter a city..."/>
-                <a href="searched.html">
-                    <img class="search-icon" src="icons/search2.png"/>
-                </a>
+                <img class="search-icon" src="icons/search2.png"/>
             <input class="search-bar" id="kw" type="text" placeholder="Enter a keyword (i.e. boba)..." />  
-            <a href="searched.html">
                 <img class="search-icon2" src="icons/search.png"/>
-            </a>
         </div>
     </div>
   </header>
@@ -51,7 +47,7 @@
         <div class="destination-preview-row">
             <div class="destination-thumbnail">
                 <a href="http://127.0.0.1:5500/popular-destinations/tokyo.html">
-                    <img class="destination-picture" src="pictures/tokyo-image.jpeg"/>
+                    <img class="destination-picture" src="../pictures/tokyo-image.jpeg"/>
                 </a>
             </div>
 
@@ -67,7 +63,7 @@
         <div class="destination-preview-row">
             <div class="destination-thumbnail">
                 <a href="http://127.0.0.1:5500/popular-destinations/honolulu.html">
-                    <img class="destination-picture" src="pictures/honolulu-image.jpeg"/>
+                    <img class="destination-picture" src="../pictures/honolulu-image.jpeg"/>
                 </a>
             </div>
 
@@ -83,7 +79,7 @@
         <div class="destination-preview-row">
             <div class="destination-thumbnail">
                 <a href="http://127.0.0.1:5500/popular-destinations/paris.html">
-                    <img class="destination-picture" src="pictures/paris-image.jpeg"/>
+                    <img class="destination-picture" src="../pictures/paris-image.jpeg"/>
                 </a>
             </div>
 
@@ -95,18 +91,18 @@
                 </p>
             </div>
         </div>
-
-        <div class="destination-preview-row">
-            <div class="destination-thumbnail">
-                <a href="http://127.0.0.1:5500/popular-destinations/lucerne.html">
-                    <img class="destination-picture" src="pictures/lucerne-image.jpeg"/>
+        
+        <div class="attraction-preview-row">
+            <div class="attraction-picture">
+                <a href="http://127.0.0.1:5500/popular-attractions/eiffel-tower.html">
+                    <img class="destination-picture" src="../pictures/eiffel-tower.avif"/>
                 </a>
             </div>
-
-            <div class="destination-info">
-                <p class="city-title">
-                    <a href="http://127.0.0.1:5500/popular-destinations/lucerne.html">
-                        Lucerne, Switzerland
+    
+            <div class="attraction-info">
+                <p class="attraction-name">
+                    <a href="http://127.0.0.1:5500/popular-attractions/eiffel-tower.html">
+                        Eiffel Tower
                     </a>
                 </p>
             </div>
@@ -118,7 +114,7 @@
     <div class="attraction-preview-row">
         <div class="attraction-picture">
             <a href="http://127.0.0.1:5500/popular-attractions/eiffel-tower.html">
-                <img class="destination-picture" src="pictures/eiffel-tower.avif"/>
+                <img class="destination-picture" src="../pictures/eiffel-tower.avif"/>
             </a>
         </div>
 
@@ -133,7 +129,7 @@
     <div class="attraction-preview-row">
         <div class="attraction-picture">
             <a href="http://127.0.0.1:5500/popular-attractions/tokyo-disneyland.html">
-                <img class="destination-picture" src="pictures/tokyo-disneyland.jpeg"/>
+                <img class="destination-picture" src="../pictures/tokyo-disneyland.jpeg"/>
             </a>
         </div>
 
@@ -148,7 +144,7 @@
     <div class="attraction-preview-row">
         <div class="attraction-picture">
             <a href="http://127.0.0.1:5500/popular-attractions/niagara-falls.html">
-                <img class="attraction-picture" src="pictures/niagara-falls.jpeg"/>
+                <img class="attraction-picture" src="../pictures/niagara-falls.jpeg"/>
             </a>
         </div>
 
@@ -161,12 +157,10 @@
         </div>
     </div>
   </section>
-
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
 
-  <!--Converts popular destinations section into a carousel-->
   <script type="text/javascript">
     $(document).ready(function(){
         $('.popular-destinations-grid').slick({
@@ -176,18 +170,6 @@
         });
     });
   </script>
-
-  <!--Converts popular attractions section into a carousel-->
-  <script type="text/javascript">
-    $(document).ready(function(){
-        $('.popular-attractions-grid').slick({
-        slidesToShow: 3,
-        dots:true,
-        centerMode: true,
-        });
-    });
-  </script>
-  
 </main>
 </body>
 
