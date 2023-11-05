@@ -50,7 +50,7 @@ async function getCityInfo()
 }
 
 async function getCommodity(city, com) {
-    cityCommodity = await fetch(`http://127.0.0.1:5500/get_yelp_data?loc=${city}&term=${com}`)
+    cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
         .then(response => response.json())
         .catch(err => console.error(err));
         console.log(JSON.parse(cityCommodity));
