@@ -22,6 +22,7 @@ async function getCityInfo()
 
         });
     }
+    
     else
     {
         var hotels;
