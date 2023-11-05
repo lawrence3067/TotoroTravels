@@ -1,16 +1,17 @@
-let desiredCity = document.getElementById("loc").value;
-let desiredCom = document.getElementById("kw").value;
-desiredCom.addEventListener('keyup', function(event)
-{
-    if (event.keyCode == 13)
-    {
-        kw_button.click();
-        getCityInfo();
-    }
-});
+// let desiredCom = document.getElementById("kw").value;
+// desiredCom.addEventListener('keyup', function(event)
+// {
+//     if (event.keyCode == 13)
+//     {
+//         kw_button.click();
+//         getCityInfo();
+//     }
+// });
 
-async function getCityInfo()
+function getCityInfo()
 {
+    let desiredCity = document.getElementById("loc").value;
+    let desiredCom = document.getElementById("kw").value;
     counter = 0;
 
     if (desiredCom != '')
@@ -18,6 +19,7 @@ async function getCityInfo()
         specificSearch = getCommodity(desiredCity, desiredCom);
         Object.entries(specificSearch).forEach(([key, value]) => 
         {
+            console.log("Yo");
             document.getElementById("info").innerHTML += `<p><br>`;
             Object.entries(value).forEach(([key, value]) =>
             {
