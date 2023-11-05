@@ -1,13 +1,3 @@
-.popular-destination-title{
-    font-size: 30px;
-    color: #4E6E58;
-    margin-top: 15px;
-    padding-left: 50px;
-    display: flex;
-    align-items: center;
-
-}
-
 .pd{
     height: 30%;
     width: 30%;
@@ -43,13 +33,15 @@
     width: 90%;
 }
 
-.city-title{
+.city-title,
+.attraction-name{
     font-size: 20px;
     color: black;
     font-weight: bold;
     padding-top: 10px;
     display: flex;
     align-items: center;
+    text-decoration: none;
 
     
 }
