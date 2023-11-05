@@ -16,9 +16,27 @@
             <img class="logo" src="pictures/logo.png"/>
         </div>
     </header>
+    <!--Search bars-->
+    <div class="middle-section">
+        <form action="searched.html">
+            <div class="search-wrapper">
+                <input name="city" class="search-bar" id="loc" type="text" placeholder="Enter a city..."/>
+                    <a href="searched.html">
+                        <img class="search-icon" src="icons/search2.png"/>
+                    </a>
+                <input name="specific" class="search-bar" id="kw" type="text" placeholder="Enter a keyword (i.e. boba)..." />  
+                <a href="searched.html">
+                    <img class="search-icon2" src="icons/search.png"/>
+                </a>
+            </div>
+            <a href="searched.html">
+                <button type="submit" onclick="getCityInfo()" id="test" ></button>
+            </a>
+        </form>
+    </div>
 
     <br><br><br><br>
-    
+
     <h1 class="tp">Top Results</h1>
     <section id="thing" class="general">
         <!-- <div class="stats">
