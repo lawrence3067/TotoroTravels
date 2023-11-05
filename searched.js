@@ -4,11 +4,12 @@ async function getCityInfo()
     var url = new URL(url_string);
     var desiredCity = url.searchParams.get("city");
     var desiredCom = url.searchParams.get("specific");
-    counter = 0;
 
     if (desiredCom != '')
     {
         specificSearch = await getCommodity(desiredCity, desiredCom);
+        console.log(desiredCity);
+        console.log(desiredcom);
         specificSearch["businesses"].sort((a,b) => b.rating - a.rating);
 
         specificSearch["businesses"].map((business) => {
