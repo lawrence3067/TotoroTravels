@@ -27,7 +27,7 @@ async function getCityInfo()
 
        //specificSearch["businesses"].map(business)
         specificSearch["businesses"].map((business) => {
-            document.getElementById("thing").innerHTML += `<p>${business["name"]} </p>`
+            document.getElementById("thing").innerHTML += `<p>${business["name"]} ${business["price"]} ${business["image_url"]} ${business["url"]} ${business["rating"]}</p>`
         });
         document.getElementById("info").innerHTML += `</p>`;
         //console.log(results[counter]);
