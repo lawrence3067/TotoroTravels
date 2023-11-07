@@ -4,12 +4,11 @@ async function getCityInfo()
     var url = new URL(url_string);
     var desiredCity = url.searchParams.get("city");
     var desiredCom = url.searchParams.get("specific");
-    var cityCommodity;
 
     if (desiredCom != '')
     {
         specificSearch = await getCommodity(desiredCity, desiredCom);
-        console.log(specificSeartch.length);
+        console.log(specificSearch.length);
         specificSearch["businesses"].sort((a,b) => b.rating - a.rating);
 
         specificSearch["businesses"].map((business) => {
@@ -54,7 +53,7 @@ async function getCommodity(city, com) {
     cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
         .then(response => response.json())
         .catch(err => console.error(err));
-    console.log(JSON.parse(cityCommodity));
+    //console.log(JSON.parse(cityCommodity));
 
     return JSON.parse(cityCommodity);
 }
