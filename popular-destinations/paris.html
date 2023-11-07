@@ -18,31 +18,32 @@
     <header class="header">
         <!--TotoroTravels Logo-->
         <div class="left-section">
-            <img class="logo" src="../pictures/logo.png"/>
+            <a href="../index.html">
+                <img class="logo" src="../pictures/logo.png"/>
+            </a> 
+        </div>
+        <div class="middle-section">
+            <form action="../searched.html">
+                <div class="search-wrapper">
+                    <input name="city" class="search-bar" id="loc" type="text" placeholder="Enter a city..."/>
+                        <button onclick="getCityInfo()" href="../searched.html">
+                            <img class="search-icon" src="../icons/search2.png"/>
+                        </button>
+                    <input name="specific" class="search-bar" id="kw" type="text" placeholder="Enter a good (i.e. boba)..." />  
+                        <button onclick="getCityInfo()" href="../searched.html">
+                            <img class="search-icon2" src="../icons/search.png"/>
+                        </button>
+                </div>
+            </form>
         </div>
     </header>
     <br><br><br><br>
     <h1>Paris, France</h1>
 
-    <section id="thing4" class="general-slideshow">
+    <div id="thing4" class="general" style="position:relative;left:80px">
         <!-- <div class="stats">
             <P> HELLO</P>
         </div> -->
-    </section>
-
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="../slick/slick.min.js"></script>
-
-    <!--Add image carousel for popular destinations-->
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.general-slideshow').slick({
-            slidesToShow: 3,
-            dots:true,
-            centerMode: true
-            });
-        });
-    </script>
+    </div>
     </body>
 </html>
