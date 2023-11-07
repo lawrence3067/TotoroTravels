@@ -20,7 +20,7 @@ app.add_middleware(
 @app.get("/get_yelp_data")
 async def get_yelp_data(loc: str, term: str):
     # Your code to retrieve data from the Yelp API here
-    url = f"https://api.yelp.com/v3/businesses/search?location={loc}&term={term}&sort_by=best_match&limit=5"
+    url = f"https://api.yelp.com/v3/businesses/search?location={loc}&term={term}&sort_by=best_match&limit=10"
     
     headers = {
         "accept": "application/json",

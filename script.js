@@ -1,27 +1,14 @@
-// let desiredCom = document.getElementById("kw").value;
-// desiredCom.addEventListener('keyup', function(event)
-// {
-//     if (event.keyCode == 13)
-//     {
-//         kw_button.click();
-//         getCityInfo();
-//     }
-// });
-
 function getCityInfo()
 {
-    //console.log("called");
     let desiredCity = document.getElementById("loc").value;
     let desiredCom = document.getElementById("kw").value;
     counter = 0;
 
     if (desiredCom != '')
     {
-        console.log("bitch");
         specificSearch = getCommodity(desiredCity, desiredCom);
         Object.entries(specificSearch).forEach(([key, value]) => 
         {
-            console.log("Yo");
             document.getElementById("info").innerHTML += `<p><br>`;
             Object.entries(value).forEach(([key, value]) =>
             {
@@ -38,7 +25,6 @@ function getCityInfo()
     }
     else
     {
-        console.log("shit");
         var hotels;
         var restaurants;
 
