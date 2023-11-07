@@ -9,6 +9,7 @@ async function getCityInfo()
     if (desiredCom != '')
     {
         specificSearch = await getCommodity(desiredCity, desiredCom);
+        console.log(specificSeartch.length);
         specificSearch["businesses"].sort((a,b) => b.rating - a.rating);
 
         specificSearch["businesses"].map((business) => {
