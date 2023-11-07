@@ -31,7 +31,13 @@ async function getCityInfo()
         hotels = await getCommodity(desiredCity, 'hotels');
         hotels["businesses"].sort((a,b) => b.rating - a.rating);
         hotels["businesses"].map((business) => {
-            document.getElementById("thing").innerHTML += `<p>${business["name"]} ${business["price"]} ${business["image_url"]} ${business["url"]} ${business["rating"]}</p>`
+            document.getElementById("thing").innerHTML += '<div class="card m-3" style="width: 18rem;">' + 
+            `<img src=${business["image_url"]} class="card-img-top"/>` + 
+            `<div class="card-body">` +
+            `<a href=${business["url"]}> <p class="store_name">${business["name"]}</p> </a>` + 
+            `<p class="store_rating">Rating: ${business["rating"]} stars</p>` + 
+            `</div>` +
+           `</div>`;
         });
 
         restaurants = await getCommodity(desiredCity, 'restaurants');

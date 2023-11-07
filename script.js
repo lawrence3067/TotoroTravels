@@ -34,18 +34,6 @@ function getCityInfo()
 
 }
 
-function printPictures(city)
-{
-    Object.entries(cityData).forEach(([key, value]) =>
-    {
-        console.log(`${key}: ${value}`);
-        document.getElementById("main").innerHTML += `
-            <div class="result" id="something">
-                <img src="${value.url}" />
-            </div>`
-    });
-}
-
 async function getCommodity(city, com) {
     cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
         .then(response => response.json())
