@@ -1,0 +1,42 @@
+/* .popular-attraction-title{
+    font-size: 30px;
+    color: #4E6E58;
+    margin-top: 10px;
+
+} */
+
+.general-slideshow{
+    display: grid;
+    justify-content: center;
+    padding-top: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+
+}
+/* 
+.attraction-preview-row{
+    margin-bottom: 8px;
+    margin-top: -10px;
+} */
+
+.general-slideshow{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+/* .attraction-picture{
+    height: 300px;
+    width: 450px;
+    border-radius: 15px;
+}
+
+.attraction-info{
+    color: orange;
+}
+
+.attraction-name{
+    color: green;
+} */
