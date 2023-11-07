@@ -4,6 +4,12 @@
     margin-left: 20px;
 }
 
+.top-results-title{
+    height: 25%;
+    width: 25%;
+    margin-left: 20px;
+}
+
 .popular-destinations-grid{
     display: grid;
     justify-content: center;
