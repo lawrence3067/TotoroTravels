@@ -49,13 +49,14 @@ async function getCommodity(city, com) {
           location: city
         }
       })
-        .then(response => response.json());
+
+    temp = JSON.stringify(cityCommodity);
       
     // cityCommodity = await fetch(proxyUrl + targetUrl, options)
     //     .then(response => response.json())
     //     .catch(err => console.error(err));
 
-    return JSON.parse(cityCommodity);
+    return JSON.parse(temp);
 }
 
 async function writeToHTML(desiredCity, good)
