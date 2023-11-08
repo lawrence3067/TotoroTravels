@@ -49,6 +49,7 @@ async function getCommodity(city, com) {
           location: city
         }
       })
+        .then(response => response.json());
       
     // cityCommodity = await fetch(proxyUrl + targetUrl, options)
     //     .then(response => response.json())
