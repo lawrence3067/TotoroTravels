@@ -45,8 +45,8 @@ async function getCommodity(city, com) {
           "Authorization": `Bearer eh4N9M5tz4-1ss0daqIgspdjsHaUVaIc0gQc2zD1axSjU4i8aExBIs6umEODX5E5dCjo3y3yNFeM_9yKtblbN7fW94GxtOeoysF8uzStsEKHUKc38lnnKfQaAh1IZXYx`
         },
         data: {
-          term: 'Bar',
-          location: "los angeles"
+          term: com,
+          location: city
         }
       })
       
