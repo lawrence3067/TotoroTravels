@@ -59,7 +59,7 @@
     position: relative;
 }
 
-.search-wrapper img {
+.search-wrapper-img {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -68,7 +68,7 @@
 .search-icon{
     width: 15px;
     height: 15px;
-    margin-left: 750px;
+    margin-left: 730px;
     padding-top: 37px;
     cursor: pointer;
 }
@@ -80,8 +80,4 @@
     margin-left: 330px;
     padding-top: 37px;
     cursor: pointer;
-}
-
-.icon2 {
-    display: inline-block;
 }

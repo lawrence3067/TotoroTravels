@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src = "./searched.js" defer></script>
-    <link rel="stylesheet" href="./styles/display.css">
-    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="styles/display.css">
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/populardestination.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -16,31 +16,30 @@
         <div class="left-section">
             <a href="index.html">
                 <img class="logo" src="pictures/logo.png"/>
-            </a>    
+            </a>
         </div>
         <!--Search bars-->
         <div class="middle-section">
             <form action="searched.html">
                 <div class="search-wrapper">
                     <input name="city" class="search-bar" id="loc" type="text" placeholder="Enter a city..."/>
-                        <button onclick="getCityInfo()" href="searched.html">
-                            <img class="search-icon" src="icons/search2.png"/>
-                        </button>
                     <input name="specific" class="search-bar" id="kw" type="text" placeholder="Enter a keyword (i.e. boba)..." />  
-                        <button onclick="getCityInfo()" href="searched.html">
-                            <img class="search-icon2" src="icons/search.png"/>
-                        </button>
+                    <input type="image" src="icons/search.png" class="search-icon2 search-wrapper-img" name="specific" id="kw">
+                    <input type="image" src="icons/search2.png" class="search-icon search-wrapper-img" name="city" id="loc">
                 </div>
             </form>
         </div>
-    </header>
+      </header>
 
-    <br><br><br><br>
+    <br><br><br><br><br><br>
 
-    <div class="popular-destination-logo">
-        <img class="top-results-title" src="pictures/Top-Results.jpeg"/>
+    <div class="popular-destination-logo" style="text-align: center;">
+        <img class="top-results-title center" src="pictures/Top-Results.jpeg"/>
     </div>
-    <section id="thing" class="general">
+
+    <br><br>
+
+    <section id="results" class="general" style="position:relative;left:80px">
         <!-- <div class="stats">
             <P> HELLO</P>
         </div> -->
