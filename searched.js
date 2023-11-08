@@ -31,7 +31,7 @@ async function getCommodity(city, com) {
         }
       };
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const targetUrl = `https://api.yelp.com/v3/businesses/search?limit=5`
+    const targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&sort_by=best_match&limit=5`
     //location=${city}&term=${com}&sort_by=best_match&
     const queryUrl = proxyUrl + targetUrl;
 
@@ -44,11 +44,12 @@ async function getCommodity(city, com) {
           "x-requested-with": "xmlhttprequest",
           "Access-Control-Allow-Origin": "*",
           "Authorization": `Bearer eh4N9M5tz4-1ss0daqIgspdjsHaUVaIc0gQc2zD1axSjU4i8aExBIs6umEODX5E5dCjo3y3yNFeM_9yKtblbN7fW94GxtOeoysF8uzStsEKHUKc38lnnKfQaAh1IZXYx`
-        },
-        data: {
-          term: com,
-          location: city
         }
+        //,
+        // data: {
+        //   term: com,
+        //   location: city
+        // }
       })
 
     temp = JSON.stringify(cityCommodity);
