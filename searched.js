@@ -25,7 +25,7 @@ async function getCommodity(city, com) {
 
     const options = {
         method: 'GET',
-        mode: 'cors',
+        mode: 'no-cors',
         credentials: 'include',
         headers: {
           accept: 'application/json',
