@@ -19,9 +19,22 @@ async function getCityInfo()
 }
 
 async function getCommodity(city, com) {
-    cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
-        .then(response => response.json())
-        .catch(err => console.error(err));
+    // cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
+    //     .then(response => response.json())
+    //     .catch(err => console.error(err));
+
+    const options = {
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+          Authorization: 'Bearer eh4N9M5tz4-1ss0daqIgspdjsHaUVaIc0gQc2zD1axSjU4i8aExBIs6umEODX5E5dCjo3y3yNFeM_9yKtblbN7fW94GxtOeoysF8uzStsEKHUKc38lnnKfQaAh1IZXYx'
+        }
+      };
+      
+    cityCommodity = fetch('https://api.yelp.com/v3/businesses/search?location=irvine&term=boba&sort_by=best_match&limit=5', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
 
     return JSON.parse(cityCommodity);
 }
