@@ -64,6 +64,7 @@ async function writeToHTML(desiredCity, good)
 {
     var fetchedGoods;
     fetchedGoods = await getCommodity(desiredCity, good);
+    console.log(fetchedGoods["businesses"]);
     fetchedGoods["businesses"].sort((a,b) => b.rating - a.rating);
     fetchedGoods["businesses"].map((business) => {
         document.getElementById("results").innerHTML += '<div class="card m-3" style="width: 15rem;">' + 
