@@ -1,4 +1,4 @@
-import * as call from '../dataFetch.js';
+import '../dataFetch.js';
 
 async function getCityInfo()
 {
