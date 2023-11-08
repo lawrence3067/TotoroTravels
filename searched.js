@@ -7,62 +7,13 @@ async function getCityInfo()
 
     if (desiredCom != '')
     {
-        specificSearch = await getCommodity(desiredCity, desiredCom);
-        console.log(specificSearch["businesses"].length);
-        specificSearch["businesses"].sort((a,b) => b.rating - a.rating);
-
-        specificSearch["businesses"].map((business) => {
-            document.getElementById("results").innerHTML += '<div class="card m-3" style="width: 15rem;">' + 
-            `<img src=${business["image_url"]} class="card-img-top"/>` + 
-            `<div class="card-body">` +
-            `<a href=${business["url"]}> <p class="store_name">${business["name"]}</p> </a>` + 
-            `<p class="store_rating">Rating: ${business["rating"]} stars</p>` + 
-            `</div>` +
-           `</div>`;
-
-        });
+        writeToHTML(desiredCity, desiredCom);
     }
-
     else
     {
-        var hotels;
-        var restaurants;
-
-        hotels = await getCommodity(desiredCity, 'hotels');
-        hotels["businesses"].sort((a,b) => b.rating - a.rating);
-        hotels["businesses"].map((business) => {
-            document.getElementById("thing").innerHTML += '<div class="card m-3" style="width: 15rem;">' + 
-            `<img src=${business["image_url"]} class="card-img-top"/>` + 
-            `<div class="card-body">` +
-            `<a href=${business["url"]}> <p class="store_name">${business["name"]}</p> </a>` + 
-            `<p class="store_rating">Rating: ${business["rating"]} stars</p>` + 
-            `</div>` +
-           `</div>`;
-        });
-
-        restaurants = await getCommodity(desiredCity, 'restaurants');
-        restaurants["businesses"].sort((a,b) => b.rating - a.rating);
-        restaurants["businesses"].map((business) => {
-            document.getElementById("thing").innerHTML += '<div class="card m-3" style="width: 15rem;">' + 
-            `<img src=${business["image_url"]} class="card-img-top"/>` + 
-            `<div class="card-body">` +
-            `<a href=${business["url"]}> <p class="store_name">${business["name"]}</p> </a>` + 
-            `<p class="store_rating">Rating: ${business["rating"]} stars</p>` + 
-            `</div>` +
-           `</div>`;
-        });
-
-        attractions = await getCommodity(desiredCity, 'tourist_attractions');
-        attractions["businesses"].sort((a,b) => b.rating - a.rating);
-        attractions["businesses"].map((business) => {
-            document.getElementById("thing").innerHTML += '<div class="card m-3" style="width: 15rem;">' + 
-            `<img src=${business["image_url"]} class="card-img-top"/>` + 
-            `<div class="card-body">` +
-            `<a href=${business["url"]}> <p class="store_name">${business["name"]}</p> </a>` + 
-            `<p class="store_rating">Rating: ${business["rating"]} stars</p>` + 
-            `</div>` +
-           `</div>`;
-        });
+        writeToHTML(desiredCity, 'hotels');
+        writeToHTML(desiredCity, 'restaurants');
+        writeToHTML(desiredCity, 'attractions');
     }
 
 }
@@ -71,20 +22,24 @@ async function getCommodity(city, com) {
     cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
         .then(response => response.json())
         .catch(err => console.error(err));
-    //console.log(JSON.parse(cityCommodity));
 
     return JSON.parse(cityCommodity);
 }
 
-function getHotels(city)
+async function writeToHTML(desiredCity, good)
 {
-    return getCommodity(city, 'hotels');
-}
-
-function getRestaurants(city)
-{
-
-    return getCommodity(city, 'restaurants');
+    var fetchedGoods;
+    fetchedGoods = await getCommodity(desiredCity, good);
+    fetchedGoods["businesses"].sort((a,b) => b.rating - a.rating);
+    fetchedGoods["businesses"].map((business) => {
+        document.getElementById("results").innerHTML += '<div class="card m-3" style="width: 15rem;">' + 
+        `<img src=${business["image_url"]} class="card-img-top"/>` + 
+        `<div class="card-body">` +
+        `<a href=${business["url"]}> <p class="store_name">${business["name"]}</p> </a>` + 
+        `<p class="store_rating">Rating: ${business["rating"]} stars</p>` + 
+        `</div>` +
+       `</div>`;
+    });
 }
 
 getCityInfo();

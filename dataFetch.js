@@ -1,17 +1,8 @@
-async function getCommodity(city, com) {
-    cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
-        .then(response => response.json())
-        .catch(err => console.error(err));
-        //console.log(JSON.parse(cityCommodity));
-
-    return JSON.parse(cityCommodity);
-}
-
-async function writeToHTML(desiredCity, good)
+export async function writeToHTML(desiredCity, good)
 {
+    var fetchedGoods;
     fetchedGoods = await getCommodity(desiredCity, good);
     fetchedGoods["businesses"].sort((a,b) => b.rating - a.rating);
-    console.log(`${desiredCity}-${good}`);
     fetchedGoods["businesses"].map((business) => {
         document.getElementById(`${desiredCity}-${good}`).innerHTML += '<div class="card m-3" style="width: 15rem;">' + 
         `<img src=${business["image_url"]} class="card-img-top"/>` + 
@@ -21,4 +12,13 @@ async function writeToHTML(desiredCity, good)
         `</div>` +
        `</div>`;
     });
+}
+
+export async function getCommodity(city, com) {
+    var cityCommodity;
+    cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
+        .then(response => response.json())
+        .catch(err => console.error(err));
+
+    return JSON.parse(cityCommodity);
 }

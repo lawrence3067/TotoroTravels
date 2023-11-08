@@ -3,25 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./lucerne.js" defer></script>
+    <script type="module" src="./lucerne.js" defer></script>
     <link rel="stylesheet" href="../styles/display.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
+    <style>
+        h1 {text-align: center;}
+    </style>
+
     <header class="header">
         <!--TotoroTravels Logo-->
         <div class="left-section">
-            <img class="logo" src="../pictures/logo.png"/>
+            <a href="../index.html">
+                <img class="logo" src="../pictures/logo.png"/>
+            </a>
+        </div>
+        <!--Search bars-->
+        <div class="middle-section">
+            <form action="../searched.html">
+                <div class="search-wrapper">
+                    <input type="image" src="../icons/search.png" class="search-icon2 search-wrapper-img" name="specific" id="kw">
+                    <input type="image" src="../icons/search2.png" class="search-icon search-wrapper-img" name="city" id="loc">
+                    <input name="city" class="search-bar" id="loc" type="text" placeholder="Enter a city..."/>
+                    <input name="specific" class="search-bar" id="kw" type="text" placeholder="Enter a keyword (i.e. boba)..." />  
+                </div>
+            </form>
         </div>
     </header>
-    <br><br><br><br>
-    <h1>Lucerne, Switzerland</h1>
-    <section id="thing3" class="general">
-        <!-- <div class="stats">
-            <P> HELLO</P>
-        </div> -->
-    </section>
+
+    <br><br><br><br><br>
+
+    <h1>Lucerne Hotels</h1>
+
+    <div id="lucerne-hotels" class="general" style="position:relative;left:80px">
+        <!--Paris Hotels Info Goes Here-->
+    </div>
+
+    <br><br>
+
+    <h1>Lucerne Restaurants</h1>
+    <div id="lucerne-restaurants" class="general" style="position:relative; left:80px">
+        <!--Paris Restaurant Info Goes Here-->
+    </div>
+
+    <br><br>
+
+    <h1>Lucerne Attractions</h1>
+    <div id="lucerne-attractions" class="general" style="position:relative; left:80px">
+        <!--Paris Attractions Info Goes Here-->
+    </div>
 </body>
 </html>
