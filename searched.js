@@ -37,6 +37,7 @@ async function getCommodity(city, com) {
     cityCommodity = $.ajax({
         url: queryUrl,
         method: "GET",
+        dataType: "json",
         headers: {
           "accept": "application/json",
           "x-requested-with": "xmlhttprequest",
