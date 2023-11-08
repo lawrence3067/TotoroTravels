@@ -33,9 +33,8 @@ async function getCommodity(city, com) {
       };
       
     cityCommodity = await fetch('https://api.yelp.com/v3/businesses/search?location=irvine&term=boba&sort_by=best_match&limit=5', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
+        .then(response => response.json())
+        .catch(err => console.error(err));
 
     return JSON.parse(cityCommodity);
 }
