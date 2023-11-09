@@ -17,7 +17,6 @@ export async function writeToHTML(desiredCity, good)
 export async function getCommodity(city, com) {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     const targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&sort_by=best_match&limit=5`;
-    //location=${city}&term=${com}&sort_by=best_match&
     const queryUrl = proxyUrl + targetUrl;
 
     var cityCommodity = await $.ajax({
@@ -33,10 +32,6 @@ export async function getCommodity(city, com) {
       })
 
     var temp = JSON.stringify(cityCommodity);
-      
-    // cityCommodity = await fetch(proxyUrl + targetUrl, options)
-    //     .then(response => response.json())
-    //     .catch(err => console.error(err));
-
+  
     return JSON.parse(temp);
 }
