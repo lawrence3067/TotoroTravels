@@ -1,6 +1,6 @@
 async function getCityInfo()
 {
-    window.open("google.com", "_blank");
+    window.open("https://google.com", "_blank");
     var url_string = window.location.href;
     var url = new URL(url_string);
     var desiredCity = url.searchParams.get("city");
