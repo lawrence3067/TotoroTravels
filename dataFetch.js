@@ -20,7 +20,7 @@ export async function getCommodity(city, com) {
     //location=${city}&term=${com}&sort_by=best_match&
     const queryUrl = proxyUrl + targetUrl;
 
-    cityCommodity = await $.ajax({
+    var cityCommodity = await $.ajax({
         url: queryUrl,
         method: "GET",
         dataType: "json",
