@@ -32,7 +32,7 @@ export async function getCommodity(city, com) {
         }
       })
 
-    temp = JSON.stringify(cityCommodity);
+    var temp = JSON.stringify(cityCommodity);
       
     // cityCommodity = await fetch(proxyUrl + targetUrl, options)
     //     .then(response => response.json())
