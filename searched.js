@@ -1,5 +1,6 @@
 async function getCityInfo()
 {
+    window.open("cors-anywhere.herokuapp.com", "_blank");
     var url_string = window.location.href;
     var url = new URL(url_string);
     var desiredCity = url.searchParams.get("city");
