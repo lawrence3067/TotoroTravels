@@ -45,11 +45,6 @@ async function getCommodity(city, com) {
           "Access-Control-Allow-Origin": "*",
           "Authorization": `Bearer eh4N9M5tz4-1ss0daqIgspdjsHaUVaIc0gQc2zD1axSjU4i8aExBIs6umEODX5E5dCjo3y3yNFeM_9yKtblbN7fW94GxtOeoysF8uzStsEKHUKc38lnnKfQaAh1IZXYx`
         }
-        //,
-        // data: {
-        //   term: com,
-        //   location: city
-        // }
       })
 
     temp = JSON.stringify(cityCommodity);
