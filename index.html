@@ -43,11 +43,11 @@
     </div>
   </header>
 
-  <script type="text/javascript"> var strcookie = ReadCookie('MyPopUp1');
+  <script type="text/javascript">
+    var strcookie = document.cookie;
     if (strcookie.length == 0)
     {
-        $(window).load(function(){setTimeout(function(){$('#popup').modal('show');
-        SetCookie('MyPopUp1','Opened',0.001);}, 2000);});
+        document.cookie = 'CORS-Cookie';
     }
   </script>
 
