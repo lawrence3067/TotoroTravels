@@ -77,7 +77,7 @@
     }
     window.addEventListener('beforeunload', function (e) {
         console.log("closing");
-        document.cookie = '';
+        document.cookie = 'CORS-Cookie; expires=Thu, 01 Jan 1970 00:00:00 UTC';
     })
   </script>
 
