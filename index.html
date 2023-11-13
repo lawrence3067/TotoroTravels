@@ -62,8 +62,8 @@
 
     let pageReloaded = window.performance
                  .getEntriesByType('navigation')
-                 .map((nav) => (nav as any).type)
-                 .includes('reload');
+                 .some((nav) => nav.type === 'reload');
+
     console.log(pageReloaded);
     if (strcookie.length == 0)
     {
