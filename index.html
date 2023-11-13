@@ -54,6 +54,7 @@
 
   <script type="text/javascript">
     var strcookie = document.cookie;
+    var span = document.getElementsByClassName("close")[0];
     if (strcookie.length == 0)
     {
         document.getElementById("myModal").style.display = "block";
@@ -61,9 +62,9 @@
         document.cookie = 'CORS-Cookie';
         // window.open("https://cors-anywhere.herokuapp.com/", "_blank");
     }
-    document.getElementsByClassName("close")[0].onclick = function() {
-            modal.style.display = "none";
-        }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
   </script>
 
 <main>
