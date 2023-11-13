@@ -57,6 +57,10 @@
     if (strcookie.length == 0)
     {
         document.getElementById("myModal").style.display = "block";
+        if (document.getElementsByClassName("close")[0].onclick)
+        {
+            modal.style.display = "none";
+        }
 
         document.cookie = 'CORS-Cookie';
         // window.open("https://cors-anywhere.herokuapp.com/", "_blank");
