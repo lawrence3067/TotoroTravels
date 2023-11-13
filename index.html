@@ -22,7 +22,7 @@
     </head>
 
 
-<body onunload="deleteCookies()">
+<body>
   <header class="header">
     <!--TotoroTravels Logo-->
     <div class="left-section">
@@ -59,9 +59,7 @@
     if (strcookie.length == 0)
     {
         modal.style.display = "block";
-
         document.cookie = 'CORS-Cookie';
-        // window.open("https://cors-anywhere.herokuapp.com/", "_blank");
     }
     span.onclick = function()
     {
@@ -74,6 +72,9 @@
             modal.style.display = "none";
         }
     }
+    $(window).unload(function() {
+        $.cookies.del('myCookie');
+    });
   </script>
 
 <main>
