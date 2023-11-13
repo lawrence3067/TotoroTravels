@@ -77,9 +77,7 @@
     }
     window.addEventListener('beforeunload', function (e) {
         console.log("closing");
-        $.cookies.del('myCookie');
-        // e.preventDefault();
-        // e.returnValue = '';
+        document.cookie = 'temp';
     })
   </script>
 
