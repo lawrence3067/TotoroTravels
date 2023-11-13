@@ -57,13 +57,13 @@
     if (strcookie.length == 0)
     {
         document.getElementById("myModal").style.display = "block";
-        document.getElementsByClassName("close")[0].onclick = function() {
-            modal.style.display = "none";
-        }
 
         document.cookie = 'CORS-Cookie';
         // window.open("https://cors-anywhere.herokuapp.com/", "_blank");
     }
+    document.getElementsByClassName("close")[0].onclick = function() {
+            modal.style.display = "none";
+        }
   </script>
 
 <main>
