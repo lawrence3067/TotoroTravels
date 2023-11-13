@@ -55,15 +55,16 @@
   <script type="text/javascript">
     var strcookie = document.cookie;
     var span = document.getElementsByClassName("close")[0];
+    var modal = document.getElementById("myModal");
     if (strcookie.length == 0)
     {
-        document.getElementById("myModal").style.display = "block";
+        modal.style.display = "block";
 
         document.cookie = 'CORS-Cookie';
         // window.open("https://cors-anywhere.herokuapp.com/", "_blank");
     }
     span.onclick = function() {
-        document.getElementById("myModal").style.display = "none";
+        modal.style.display = "none";
     }
   </script>
 
