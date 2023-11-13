@@ -60,6 +60,11 @@
         document.cookie = 'CORS-Cookie';
         // window.open("https://cors-anywhere.herokuapp.com/", "_blank");
     }
+
+    $(window).unload(function()
+    {
+        $.cookies.del('CORS-Cookie');
+    });
   </script>
 
 <main>
