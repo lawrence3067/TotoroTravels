@@ -60,10 +60,6 @@
     var span = document.getElementsByClassName("close")[0];
     var modal = document.getElementById("myModal");
 
-    let pageReloaded = window.performance
-                 .getEntriesByType('navigation')
-                 .some((nav) => nav.type === 'reload');
-
     console.log(pageReloaded);
     if (strcookie.length == 0)
     {
@@ -81,10 +77,16 @@
             modal.style.display = "none";
         }
     }
-    // window.addEventListener('beforeunload', function (e) {
-    //     console.log("closing");
-    //     document.cookie = 'CORS-Cookie; expires=Thu, 01 Jan 1970 00:00:00 UTC';
-    // })
+    let pageReloaded = window.performance
+                 .getEntriesByType('navigation')
+                 .some((nav) => nav.type === 'reload');
+
+    window.addEventListener('beforeunload', function (e) {
+        if (pageReloaded == false)
+        {
+            document.cookie = 'CORS-Cookie; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+        }
+    })
   </script>
 
 <main>
