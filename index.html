@@ -75,9 +75,10 @@
             modal.style.display = "none";
         }
     }
-    $(window).onunload(function() {
-        $.cookies.del('CORS-Cookie');
-    });
+    window.addEventListener('beforeunload', function (e) {
+        e.preventDefault();
+        e.returnValue = '';
+    })
   </script>
 
 <main>
