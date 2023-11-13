@@ -47,7 +47,7 @@
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
-      <p> Click the button and enable CORS-Anywhere in the pop-up window.</p>
+      <p> Click the button and enable CORS-Anywhere in the pop-up window. </p>
       <button onclick="popUpWindow()">CORS-Anywhere</button>
     </div>
   </div>
@@ -57,7 +57,7 @@
     if (strcookie.length == 0)
     {
         document.getElementById("myModal").style.display = "block";
-        if (document.getElementsByClassName("close")[0].onclick)
+        document.getElementsByClassName("close")[0].onclick = function()
         {
             modal.style.display = "none";
         }
