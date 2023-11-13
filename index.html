@@ -73,13 +73,10 @@
             modal.style.display = "none";
         }
     }
-
-    window.addEventListener('beforeunload', function (e) {
-        if (pageReloaded = window.performance.getEntriesByType('navigation').some((nav) => nav.type === 'reload') == false)
-        {
-            document.cookie = 'CORS-Cookie; expires=Thu, 01 Jan 1970 00:00:00 UTC';
-        }
-    })
+    if (window.performance.getEntriesByType('navigation').some((nav) => nav.type === 'reload') == false)
+    {
+        document.cookie = 'CORS-Cookie; expires=Thu, 01 Jan 1970 00:00:00 UTC';
+    }
   </script>
 
 <main>
