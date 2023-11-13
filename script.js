@@ -52,3 +52,8 @@ function getRestaurants(city)
 
     return getCommodity(city, 'restaurants');
 }
+
+function popUpWindow()
+{
+    window.open("https://cors-anywhere.herokuapp.com/", "_blank");
+}
