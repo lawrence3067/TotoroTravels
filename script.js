@@ -56,9 +56,5 @@ function getRestaurants(city)
 function popUpWindow()
 {
     window.open("https://cors-anywhere.herokuapp.com/", "_blank");
-}
-
-function deleteCookies()
-{
-    document.cookie = document.cookie + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    modal.style.display = "none";
 }
