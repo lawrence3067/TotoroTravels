@@ -76,8 +76,10 @@
         }
     }
     window.addEventListener('beforeunload', function (e) {
-        e.preventDefault();
-        e.returnValue = '';
+        console.log("closing");
+        $.cookies.del('myCookie');
+        // e.preventDefault();
+        // e.returnValue = '';
     })
   </script>
 
