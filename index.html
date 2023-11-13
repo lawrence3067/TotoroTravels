@@ -43,12 +43,24 @@
     </div>
   </header>
 
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <input type="button" onclick="popup('https://cors-anywhere.herokuapp.com/', 'about');"></button>
+    </div>
+  
+  </div>
+
   <script type="text/javascript">
     var strcookie = document.cookie;
     if (strcookie.length == 0)
     {
+        document.getElementById("myModal").style.display = "block";
+
         document.cookie = 'CORS-Cookie';
-        window.open("https://cors-anywhere.herokuapp.com/", "_blank");
+        // window.open("https://cors-anywhere.herokuapp.com/", "_blank");
     }
   </script>
 
