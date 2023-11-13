@@ -75,7 +75,7 @@
             modal.style.display = "none";
         }
     }
-    $(window).unload(function() {
+    $(window).onunload(function() {
         $.cookies.del('CORS-Cookie');
     });
   </script>
