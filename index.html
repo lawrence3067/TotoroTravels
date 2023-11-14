@@ -56,13 +56,17 @@
   </div>
 
   <script type="text/javascript">
+    // Cookies content
     var strcookie = document.cookie;
     var span = document.getElementsByClassName("close")[0];
     var modal = document.getElementById("myModal");
 
     if (strcookie.length == 0) {
+        var currDate = new Date();
+        var currTime = currDate.getTime() + 3600*1000;
+        currDate.setTime(currTime);
         modal.style.display = "block";
-        document.cookie = 'CORS-Cookie';
+        document.cookie = 'CORS-Cookie; expires=' + currDate.toUTCString();
     }
     span.onclick = function() {
         modal.style.display = "none";
