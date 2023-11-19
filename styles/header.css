@@ -120,7 +120,7 @@
     cursor: pointer;
   }
 
-  .dropbtn {
+  .dropbutton {
     background-color: #04AA6D;
     color: white;
     padding: 16px;
@@ -129,13 +129,13 @@
   }
   
   /* The container <div> - needed to position the dropdown content */
-  .dropdown {
+  .drop-menu {
     position: relative;
     display: inline-block;
   }
   
   /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+  .drop-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
