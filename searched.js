@@ -1,4 +1,9 @@
-async function getCityInfo()
+function getByRating()
+{
+  getCityInfo('rating');
+}
+
+async function getCityInfo(sorting)
 {
     // window.open("https://cors-anywhere.herokuapp.com/", "_blank");
     var url_string = window.location.href;
@@ -8,18 +13,18 @@ async function getCityInfo()
 
     if (desiredCom != '')
     {
-        writeToHTML(desiredCity, desiredCom);
+        writeToHTML(desiredCity, desiredCom, sorting);
     }
     else
     {
-        writeToHTML(desiredCity, 'hotels');
-        writeToHTML(desiredCity, 'restaurants');
-        writeToHTML(desiredCity, 'attractions');
+        writeToHTML(desiredCity, 'hotels', sorting);
+        writeToHTML(desiredCity, 'restaurants', sorting);
+        writeToHTML(desiredCity, 'attractions', sorting);
     }
 
 }
 
-async function getCommodity(city, com) {
+async function getCommodity(city, com, sorting) {
     // cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
     //     .then(response => response.json())
     //     .catch(err => console.error(err));
@@ -32,7 +37,7 @@ async function getCommodity(city, com) {
         }
       };
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&sort_by=best_match&limit=5`
+    const targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&sort_by=${sorting}&limit=5`
     //location=${city}&term=${com}&sort_by=best_match&
     const queryUrl = proxyUrl + targetUrl;
 
@@ -57,10 +62,10 @@ async function getCommodity(city, com) {
     return JSON.parse(temp);
 }
 
-async function writeToHTML(desiredCity, good)
+async function writeToHTML(desiredCity, good, sorting)
 {
     var fetchedGoods;
-    fetchedGoods = await getCommodity(desiredCity, good);
+    fetchedGoods = await getCommodity(desiredCity, good, sorting);
     console.log(fetchedGoods["businesses"]);
     fetchedGoods["businesses"].sort((a,b) => b.rating - a.rating);
     fetchedGoods["businesses"].map((business) => {
