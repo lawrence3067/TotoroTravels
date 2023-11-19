@@ -42,10 +42,10 @@ async function getCommodity(city, com, sorting) {
         }
       };
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-     targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&sort_by=${sorting}&limit=5`
+    targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&sort_by=${sorting}&limit=5`
     if (sorting == 'pricing')
     {
-      targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&categories=&price=1sort_by=best_match&limit=5`
+      targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&categories=&price=1&sort_by=best_match&limit=5`
     }
     //location=${city}&term=${com}&sort_by=best_match&
     const queryUrl = proxyUrl + targetUrl;
