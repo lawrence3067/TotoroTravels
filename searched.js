@@ -4,15 +4,26 @@ function getByRating()
   getCityInfo('rating');
 }
 
-function getByPrice()
+function getByPriceLow()
 {
   document.getElementById("results").innerHTML = '';
-  getCityInfo('pricing');
+  getCityInfo('pricing1');
+}
+
+function getByPriceHigh()
+{
+  document.getElementById("results").innerHTML = '';
+  getCityInfo('pricing4');
+}
+
+function getByDistance()
+{
+  document.getElementById("results").innerHTML = '';
+  getCityInfo('distance');
 }
 
 async function getCityInfo(sorting)
 {
-    // window.open("https://cors-anywhere.herokuapp.com/", "_blank");
     var url_string = window.location.href;
     var url = new URL(url_string);
     var desiredCity = url.searchParams.get("city");
@@ -31,11 +42,8 @@ async function getCityInfo(sorting)
 
 }
 
-async function getCommodity(city, com, sorting) {
-    // cityCommodity = await fetch(`http://127.0.0.1:8000/get_yelp_data?loc=${city}&term=${com}`)
-    //     .then(response => response.json())
-    //     .catch(err => console.error(err));
-
+async function getCommodity(city, com, sorting)
+{
     const options = {
         method: 'GET',
         headers: {
@@ -45,11 +53,12 @@ async function getCommodity(city, com, sorting) {
       };
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&sort_by=${sorting}&limit=5`
-    if (sorting == 'pricing')
+
+    if (sorting.substring(0, 7) == 'pricing')
     {
-      targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&categories=&price=1&sort_by=best_match&limit=5`
+      targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&categories=&price=${sorting.substring(6, 7)}&sort_by=best_match&limit=5`
     }
-    //location=${city}&term=${com}&sort_by=best_match&
+
     const queryUrl = proxyUrl + targetUrl;
 
     cityCommodity = await $.ajax({
