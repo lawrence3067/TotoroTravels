@@ -3,6 +3,11 @@ function getByRating()
   getCityInfo('rating');
 }
 
+function getByPrice()
+{
+  getCityInfo('pricing');
+}
+
 async function getCityInfo(sorting)
 {
     // window.open("https://cors-anywhere.herokuapp.com/", "_blank");
@@ -37,7 +42,11 @@ async function getCommodity(city, com, sorting) {
         }
       };
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-    const targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&sort_by=${sorting}&limit=5`
+     targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&sort_by=${sorting}&limit=5`
+    if (sorting == 'pricing')
+    {
+      targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&categories=&price=1sort_by=best_match&limit=5`
+    }
     //location=${city}&term=${com}&sort_by=best_match&
     const queryUrl = proxyUrl + targetUrl;
 
