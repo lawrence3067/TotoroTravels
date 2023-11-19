@@ -1,12 +1,12 @@
 function getByRating()
 {
-  window.location.reload();
+  document.getElementById("results").innerHTML = '';
   getCityInfo('rating');
 }
 
 function getByPrice()
 {
-  window.location.reload();
+  document.getElementById("results").innerHTML = '';
   getCityInfo('pricing');
 }
 
