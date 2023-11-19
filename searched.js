@@ -1,10 +1,12 @@
 function getByRating()
 {
+  window.location.reload();
   getCityInfo('rating');
 }
 
 function getByPrice()
 {
+  window.location.reload();
   getCityInfo('pricing');
 }
 
