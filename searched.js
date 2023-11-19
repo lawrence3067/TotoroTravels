@@ -39,7 +39,6 @@ async function getCityInfo(sorting)
         writeToHTML(desiredCity, 'restaurants', sorting);
         writeToHTML(desiredCity, 'attractions', sorting);
     }
-
 }
 
 async function getCommodity(city, com, sorting)
@@ -56,7 +55,7 @@ async function getCommodity(city, com, sorting)
 
     if (sorting.substring(0, 7) == 'pricing')
     {
-      targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&categories=&price=${sorting.substring(6, 7)}&sort_by=best_match&limit=5`
+      targetUrl = `https://api.yelp.com/v3/businesses/search?location=${city}&term=${com}&categories=&price=${sorting.substring(7, 8)}&sort_by=best_match&limit=5`
     }
 
     const queryUrl = proxyUrl + targetUrl;
